@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "bunx drizzle-kit generate --dialect sqlite --schema ./src/db/schema.ts",
+    "migrate": "bun src/db/migrate.ts",
+    "dev": "bun run --watch src/index.ts"
+  },
+  "dependencies": {
+    "@bogeychan/elysia-oauth2": "^0.0.20",
+    "drizzle-orm": "^0.32.1",
+    "elysia": "latest",
+    "sql-log-prettifier": "^0.1.2"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.6",
+    "drizzle-kit": "^0.23.1"
+  },
+  "module": "src/index.js"
+}
